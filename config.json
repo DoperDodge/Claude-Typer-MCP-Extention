@@ -1,0 +1,12 @@
+{
+  "typing": {
+    "wpm": 80,
+    "consistency": 0.7,
+    "human_mode": true
+  },
+  "style": {
+    "preset": null,
+    "grade_level": null,
+    "active_profile": null
+  }
+}

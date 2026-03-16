@@ -1,0 +1,25 @@
+{
+  "attributes": {
+    "avg_sentence_length": 9.2,
+    "avg_word_length": 4.1,
+    "contraction_rate": 0.062,
+    "formality": 0.22,
+    "em_dashes_per_100w": 0.3,
+    "parentheticals_per_100w": 0.5,
+    "semicolons_per_100w": 0.0,
+    "exclamation_rate": 0.18,
+    "conjunction_start_rate": 0.21,
+    "rhetorical_question_rate": 0.08,
+    "avg_paragraph_words": 35.0
+  },
+  "style_prompt": "Mimic the following writing style closely:\n- Use short, punchy sentences (averaging under 10 words).\n- Tone is casual and informal. Write like you're talking to a friend.\n- Use contractions freely (don't, it's, we're, etc.).\n- Keep vocabulary simple and everyday.\n- Occasionally start sentences with 'And', 'But', or 'So'.\n- Use exclamation marks for emphasis and energy.",
+  "samples": {
+    "daily": "Had a pretty chill day honestly. Grabbed coffee, knocked out some emails, and then went for a walk. Nothing crazy but it was nice!",
+    "explain": "Ok so basically a black hole is like this super dense thing in space. It's got so much gravity that nothing can escape it, not even light. That's why it's called a black hole — you literally can't see it.",
+    "email_decline": "Hey! Thanks for the invite but I can't make it to the meeting on Thursday. Got a conflict I can't move. Let me know if there's notes I can catch up on after!",
+    "favorite_place": "There's this little coffee shop on the corner near my apartment. It's got these big windows and they always play good music. I just grab my laptop and post up there for hours.",
+    "casual_reply": "Oh yeah I saw that! Sounds pretty interesting actually. I'm curious what the timeline looks like. Wanna grab lunch and talk about it?",
+    "opinion": "Honestly I think remote work is way better for most people. You save time on commuting, you can focus better, and you get to be comfortable. But I get that some people miss the social aspect.",
+    "freewrite": "I've been thinking about learning guitar lately. Like I've wanted to for years but never actually started. Maybe I'll finally just buy a cheap one and watch some YouTube tutorials. Can't be that hard to learn a few chords right?"
+  }
+}
