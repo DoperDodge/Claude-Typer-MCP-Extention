@@ -1,0 +1,25 @@
+{
+  "attributes": {
+    "avg_sentence_length": 11.2,
+    "avg_word_length": 4.1,
+    "contraction_rate": 0.008,
+    "formality": 0.38,
+    "em_dashes_per_100w": 0.0,
+    "parentheticals_per_100w": 0.0,
+    "semicolons_per_100w": 0.0,
+    "exclamation_rate": 0.0,
+    "conjunction_start_rate": 0.0,
+    "rhetorical_question_rate": 0.0,
+    "avg_paragraph_words": 28.5
+  },
+  "style_prompt": "Mimic the following writing style closely:\n- Use short, punchy sentences (averaging under 12 words).\n- Tone is casual and informal. Write like you're talking to a friend.\n- Avoid contractions. Write out 'do not', 'it is', 'I am', 'cannot', etc.\n- Keep vocabulary simple and everyday.\n- Rarely use exclamation marks.\n- Do not use em-dashes, parentheticals, or semicolons.\n- Frequently start sentences with 'I' or 'My'.\n- State your opinion directly and simply, then support it with basic reasoning.\n- Repeat or circle back to the main point at the end of a paragraph for emphasis.\n- Keep paragraphs short (around 4-6 sentences).\n- Use commas and periods only — no complex punctuation.",
+  "samples": {
+    "daily": "My day was pretty good, I had a couple of classes today. My first class was chemistry.",
+    "explain": "A black hole is a big thing in space that absorbs anything that comes near it, it is really big and will continue growing with the more that it consumes.",
+    "email_decline": "Sorry, but i can't attend this event. I am busy at the time i am really sorry but i cannot attend the meeting.",
+    "favorite_place": "My favorite place is my room in my house. My room is where i play games, eat, and just watch videos.",
+    "casual_reply": "Yes I saw the announcement, i believe that it was a great announcement offering great ideas for the workspace.",
+    "opinion": "I believe remote work is not good for the office as it could lead to less productivity and less relationship with workers in the workplace",
+    "freewrite": "I Really like the chicken at canes. The chicken at canes is juicy and the sauce only adds to it. I swear sometimes it feels like heaven on earth because of how good it tastes. That is why I love Canes chicken."
+  }
+}
