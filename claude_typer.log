@@ -1,0 +1,335 @@
+2026-03-16 15:53:02,229 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 15:53:02,230 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 15:53:02,230 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 15:53:02,230 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 15:53:02,262 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 15:53:02,262 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 15:53:02,273 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 15:53:02,273 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 15:53:02,274 [claude-typer.server] INFO: Server started
+2026-03-16 15:53:02,299 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 15:53:02,302 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 15:53:02,303 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 15:57:02,971 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 15:57:02,972 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 15:57:02,972 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 15:57:02,972 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 15:57:03,003 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 15:57:03,004 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 15:57:03,014 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 15:57:03,014 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 15:57:03,015 [claude-typer.server] INFO: Server started
+2026-03-16 15:57:03,176 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 15:57:03,178 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 15:57:03,180 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 16:09:35,281 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 16:09:35,281 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 16:09:35,282 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 16:09:35,282 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 16:09:35,311 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 16:09:35,315 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 16:09:35,325 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 16:09:35,325 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 16:09:35,326 [claude-typer.server] INFO: Server started
+2026-03-16 16:09:35,466 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 16:09:35,470 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 16:09:35,471 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 16:12:29,255 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 16:12:29,256 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 16:12:29,256 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 16:12:29,256 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 16:12:29,285 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 16:12:29,286 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 16:12:29,294 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 16:12:29,295 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 16:12:29,296 [claude-typer.server] INFO: Server started
+2026-03-16 16:12:29,422 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 16:12:29,424 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 16:12:29,425 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 16:21:50,045 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:21:50,046 [claude-typer.queue] INFO: Queue loaded: 7 answers
+2026-03-16 16:21:50,046 [claude-typer.server] INFO: Queue loaded: 7 answers
+2026-03-16 16:23:27,915 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 16:23:27,916 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 16:23:27,916 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 16:23:27,916 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 16:23:27,947 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 16:23:27,948 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 16:23:27,959 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 16:23:27,959 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 16:23:27,960 [claude-typer.server] INFO: Server started
+2026-03-16 16:23:28,136 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 16:23:28,139 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 16:23:28,140 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 16:26:03,282 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:26:03,283 [claude-typer.server] INFO: Health check: healthy (0 issues)
+2026-03-16 16:26:13,189 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:26:13,190 [claude-typer.queue] INFO: Queue loaded: 7 answers
+2026-03-16 16:26:13,190 [claude-typer.server] INFO: Queue loaded: 7 answers
+2026-03-16 16:28:58,169 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:28:58,321 [claude-typer.window] INFO: Focused window: Zucker, Derek: Unit 8 AP Euro Notebook - Google Docs - Opera (hwnd=327820)
+2026-03-16 16:28:58,322 [claude-typer.server] INFO: Focused: Zucker, Derek: Unit 8 AP Euro Notebook - Google Docs - Opera
+2026-03-16 16:29:14,697 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 16:29:14,698 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 16:29:14,698 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 16:29:14,698 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 16:29:14,724 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 16:29:14,724 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 16:29:14,734 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 16:29:14,734 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 16:29:14,735 [claude-typer.server] INFO: Server started
+2026-03-16 16:29:14,871 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 16:29:14,874 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 16:29:14,875 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 16:29:50,541 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:29:50,693 [claude-typer.window] INFO: Focused window: Zucker, Derek: Unit 8 AP Euro Notebook - Google Docs - Opera (hwnd=327820)
+2026-03-16 16:29:50,696 [claude-typer.server] INFO: Focused: Zucker, Derek: Unit 8 AP Euro Notebook - Google Docs - Opera
+2026-03-16 16:29:58,047 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:30:05,222 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:30:05,223 [claude-typer.queue] INFO: Queue loaded: 7 answers
+2026-03-16 16:30:05,223 [claude-typer.server] INFO: Queue loaded: 7 answers
+2026-03-16 16:30:12,030 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:30:12,030 [claude-typer.queue] INFO: Typing answer 1/7 (215 chars)
+2026-03-16 16:31:10,762 [claude-typer.typing] INFO: Typed 215 chars in 58.73s
+2026-03-16 16:51:11,123 [claude-typer.hotkeys] INFO: Registered hotkey: F6 → next_answer
+2026-03-16 16:51:11,124 [claude-typer.hotkeys] INFO: Registered hotkey: F7 → skip_answer
+2026-03-16 16:51:11,124 [claude-typer.hotkeys] INFO: Registered hotkey: F8 → stop_clear
+2026-03-16 16:51:11,124 [claude-typer.hotkeys] INFO: Registered hotkey: F9 → undo_last
+2026-03-16 16:51:11,155 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 16:51:11,159 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 16:51:11,168 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 16:51:11,168 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 16:51:11,169 [claude-typer.server] INFO: Server started
+2026-03-16 16:51:11,310 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 16:51:11,313 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 16:51:11,314 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 16:53:30,742 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 16:53:30,743 [claude-typer.queue] INFO: Queue loaded: 7 answers
+2026-03-16 16:53:30,743 [claude-typer.server] INFO: Queue loaded: 7 answers
+2026-03-16 16:54:09,759 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (F6)
+2026-03-16 16:54:09,760 [claude-typer.queue] INFO: Typing answer 1/7 (560 chars)
+2026-03-16 16:54:20,791 [claude-typer.hotkeys] INFO: Hotkey triggered: stop_clear (F8)
+2026-03-16 16:54:20,792 [claude-typer.typing] INFO: Stop requested
+2026-03-16 16:54:20,792 [claude-typer.server] INFO: Hotkey stop: typing cancelled
+2026-03-16 16:54:20,837 [claude-typer.typing] INFO: Typing cancelled at char 48/560
+2026-03-16 16:54:42,754 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (F6)
+2026-03-16 16:54:49,711 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (F6)
+2026-03-16 16:54:53,055 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (F7)
+2026-03-16 16:54:54,690 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (F7)
+2026-03-16 16:54:56,915 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (F7)
+2026-03-16 17:00:16,056 [claude-typer.hotkeys] INFO: Registered hotkey: Shift+Enter → next_answer
+2026-03-16 17:00:16,057 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Enter → skip_answer
+2026-03-16 17:00:16,057 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+[ → stop_clear
+2026-03-16 17:00:16,057 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+] → undo_last
+2026-03-16 17:00:16,087 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 17:00:16,087 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 17:00:16,095 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 17:00:16,096 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 17:00:16,096 [claude-typer.server] INFO: Server started
+2026-03-16 17:00:16,235 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 17:00:16,237 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 17:00:16,239 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 17:01:53,910 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 17:01:53,912 [claude-typer.queue] INFO: Queue loaded: 7 answers
+2026-03-16 17:01:53,912 [claude-typer.server] INFO: Queue loaded: 7 answers
+2026-03-16 17:02:30,730 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Shift+Enter)
+2026-03-16 17:02:30,731 [claude-typer.queue] INFO: Typing answer 1/7 (679 chars)
+2026-03-16 17:05:22,450 [claude-typer.typing] INFO: Typed 679 chars in 171.72s
+2026-03-16 18:26:16,260 [claude-typer.hotkeys] INFO: Registered hotkey: Shift+Enter → next_answer
+2026-03-16 18:26:16,261 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Enter → skip_answer
+2026-03-16 18:26:16,261 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+[ → stop_clear
+2026-03-16 18:26:16,261 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+] → undo_last
+2026-03-16 18:26:16,291 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 18:26:16,292 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 18:26:16,299 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 18:26:16,300 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 18:26:16,301 [claude-typer.server] INFO: Server started
+2026-03-16 18:26:16,428 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 18:26:16,431 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 18:26:16,432 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 18:28:27,632 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 18:28:27,632 [claude-typer.queue] INFO: Queue loaded: 7 answers
+2026-03-16 18:28:27,633 [claude-typer.server] INFO: Queue loaded: 7 answers
+2026-03-16 18:28:49,905 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Shift+Enter)
+2026-03-16 18:28:49,906 [claude-typer.queue] INFO: Typing answer 1/7 (257 chars)
+2026-03-16 18:29:54,158 [claude-typer.typing] INFO: Typed 257 chars in 64.25s
+2026-03-16 18:31:25,009 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 18:37:00,925 [claude-typer.hotkeys] INFO: Registered hotkey: Shift+Enter → next_answer
+2026-03-16 18:37:00,926 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Enter → skip_answer
+2026-03-16 18:37:00,926 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+[ → stop_clear
+2026-03-16 18:37:00,926 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+] → undo_last
+2026-03-16 18:37:00,955 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 18:37:00,959 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 18:37:00,979 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 18:37:00,979 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 18:37:00,980 [claude-typer.server] INFO: Server started
+2026-03-16 18:37:01,111 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 18:37:01,114 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 18:37:01,115 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 18:39:09,515 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 18:39:09,516 [claude-typer.queue] INFO: Queue loaded: 6 answers
+2026-03-16 18:39:09,517 [claude-typer.server] INFO: Queue loaded: 6 answers
+2026-03-16 18:39:56,376 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Shift+Enter)
+2026-03-16 18:39:56,377 [claude-typer.queue] INFO: Typing answer 1/6 (261 chars)
+2026-03-16 18:41:04,997 [claude-typer.typing] INFO: Typed 261 chars in 68.62s
+2026-03-16 18:41:10,811 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Shift+Enter)
+2026-03-16 18:41:18,834 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (Ctrl+Shift+Enter)
+2026-03-16 18:41:28,455 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Shift+Enter)
+2026-03-16 18:41:30,722 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Shift+Enter)
+2026-03-16 18:46:12,776 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 18:46:12,777 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 18:46:12,777 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 18:46:12,777 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 18:46:12,808 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 18:46:12,810 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 18:46:12,818 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 18:46:12,818 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 18:46:12,819 [claude-typer.server] INFO: Server started
+2026-03-16 18:46:12,963 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 18:46:12,965 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 18:46:12,967 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 18:49:11,104 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 18:49:11,104 [claude-typer.queue] INFO: Queue loaded: 5 answers
+2026-03-16 18:49:11,105 [claude-typer.server] INFO: Queue loaded: 5 answers
+2026-03-16 18:52:09,624 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 18:53:50,610 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 18:53:50,611 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 18:53:50,611 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 18:53:50,611 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 18:53:50,637 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 18:53:50,638 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 18:53:50,646 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 18:53:50,647 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 18:53:50,647 [claude-typer.server] INFO: Server started
+2026-03-16 18:53:50,792 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 18:53:50,794 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 18:53:50,795 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 18:55:11,020 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Space → next_answer
+2026-03-16 18:55:11,021 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+S → skip_answer
+2026-03-16 18:55:11,021 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+X → stop_clear
+2026-03-16 18:55:11,021 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Shift+Z → undo_last
+2026-03-16 18:55:11,051 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 18:55:11,051 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 18:55:11,061 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 18:55:11,061 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 18:55:11,062 [claude-typer.server] INFO: Server started
+2026-03-16 18:55:11,190 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 18:55:11,193 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 18:55:11,194 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 19:13:23,847 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+N → next_answer
+2026-03-16 19:13:23,848 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+S → skip_answer
+2026-03-16 19:13:23,849 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+X → stop_clear
+2026-03-16 19:13:23,849 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+Z → undo_last
+2026-03-16 19:13:23,879 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 19:13:23,881 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 19:13:23,896 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 19:13:23,896 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 19:13:23,898 [claude-typer.server] INFO: Server started
+2026-03-16 19:13:24,053 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 19:13:24,055 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 19:13:24,056 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 19:15:19,713 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 19:15:19,714 [claude-typer.queue] INFO: Queue loaded: 4 answers
+2026-03-16 19:15:19,715 [claude-typer.server] INFO: Queue loaded: 4 answers
+2026-03-16 19:15:43,059 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+N → next_answer
+2026-03-16 19:15:43,060 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+S → skip_answer
+2026-03-16 19:15:43,060 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+X → stop_clear
+2026-03-16 19:15:43,060 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+Z → undo_last
+2026-03-16 19:15:43,085 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 19:15:43,086 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 19:15:43,095 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 19:15:43,095 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 19:15:43,096 [claude-typer.server] INFO: Server started
+2026-03-16 19:15:43,218 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 19:15:43,220 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 19:15:43,221 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 19:17:22,716 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 19:17:22,717 [claude-typer.queue] INFO: Queue loaded: 5 answers
+2026-03-16 19:17:22,717 [claude-typer.server] INFO: Queue loaded: 5 answers
+2026-03-16 19:17:43,921 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 19:17:43,973 [claude-typer.queue] INFO: Typing answer 1/5 (288 chars)
+2026-03-16 19:18:50,452 [claude-typer.typing] INFO: Typed 288 chars in 66.47s
+2026-03-16 19:19:57,187 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 19:20:01,542 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (Ctrl+Alt+S)
+2026-03-16 19:20:04,088 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (Ctrl+Alt+S)
+2026-03-16 19:20:06,628 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (Ctrl+Alt+S)
+2026-03-16 19:20:08,420 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (Ctrl+Alt+S)
+2026-03-16 19:20:09,595 [claude-typer.hotkeys] INFO: Hotkey triggered: skip_answer (Ctrl+Alt+S)
+2026-03-16 19:20:11,481 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 19:20:24,398 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 22:47:09,855 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+N → next_answer
+2026-03-16 22:47:09,856 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+S → skip_answer
+2026-03-16 22:47:09,857 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+X → stop_clear
+2026-03-16 22:47:09,857 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+Z → undo_last
+2026-03-16 22:47:09,897 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 22:47:09,897 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 22:47:09,907 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 22:47:09,907 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 22:47:09,908 [claude-typer.server] INFO: Server started
+2026-03-16 22:47:10,052 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 22:47:10,054 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 22:47:10,056 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 22:56:54,283 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+N → next_answer
+2026-03-16 22:56:54,284 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+S → skip_answer
+2026-03-16 22:56:54,284 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+X → stop_clear
+2026-03-16 22:56:54,284 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+Z → undo_last
+2026-03-16 22:56:54,308 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 22:56:54,309 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 22:56:54,317 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 22:56:54,317 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 22:56:54,318 [claude-typer.server] INFO: Server started
+2026-03-16 22:56:54,440 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 22:56:54,442 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 22:56:54,444 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 22:58:39,493 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 22:58:39,494 [claude-typer.queue] INFO: Queue loaded: 4 answers
+2026-03-16 22:58:39,494 [claude-typer.server] INFO: Queue loaded: 4 answers
+2026-03-16 22:58:58,720 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 22:58:58,772 [claude-typer.queue] INFO: Typing answer 1/4 (306 chars)
+2026-03-16 22:58:58,930 [claude-typer.typing] INFO: Pasted 306 chars
+2026-03-16 22:58:59,133 [claude-typer.server] INFO: Typed answer 1 (306 chars) — 3 remaining
+2026-03-16 22:59:04,679 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 22:59:04,730 [claude-typer.queue] INFO: Typing answer 2/4 (248 chars)
+2026-03-16 22:59:04,887 [claude-typer.typing] INFO: Pasted 248 chars
+2026-03-16 22:59:05,092 [claude-typer.server] INFO: Typed answer 2 (248 chars) — 2 remaining
+2026-03-16 22:59:12,595 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 22:59:12,647 [claude-typer.queue] INFO: Typing answer 3/4 (252 chars)
+2026-03-16 22:59:12,803 [claude-typer.typing] INFO: Pasted 252 chars
+2026-03-16 22:59:13,010 [claude-typer.server] INFO: Typed answer 3 (252 chars) — 1 remaining
+2026-03-16 22:59:15,076 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 22:59:15,128 [claude-typer.queue] INFO: Typing answer 4/4 (275 chars)
+2026-03-16 22:59:15,284 [claude-typer.typing] INFO: Pasted 275 chars
+2026-03-16 22:59:15,488 [claude-typer.server] INFO: Queue complete! 4 typed, 0 skipped
+2026-03-16 22:59:15,488 [claude-typer.server] INFO: Typed answer 4 (275 chars) — 0 remaining
+2026-03-16 23:06:20,001 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+N → next_answer
+2026-03-16 23:06:20,003 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+S → skip_answer
+2026-03-16 23:06:20,003 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+X → stop_clear
+2026-03-16 23:06:20,003 [claude-typer.hotkeys] INFO: Registered hotkey: Ctrl+Alt+Z → undo_last
+2026-03-16 23:06:20,057 [claude-typer.server] INFO: Claude Typer starting...
+2026-03-16 23:06:20,058 [claude-typer.server] INFO: All dependencies OK
+2026-03-16 23:06:20,072 [claude-typer.hotkeys] INFO: Global hotkey listener started
+2026-03-16 23:06:20,072 [claude-typer.server] INFO: Hotkey listener active
+2026-03-16 23:06:20,073 [claude-typer.server] INFO: Server started
+2026-03-16 23:06:20,314 [mcp.server.lowlevel.server] INFO: Processing request of type ListToolsRequest
+2026-03-16 23:06:20,317 [mcp.server.lowlevel.server] INFO: Processing request of type ListPromptsRequest
+2026-03-16 23:06:20,320 [mcp.server.lowlevel.server] INFO: Processing request of type ListResourcesRequest
+2026-03-16 23:06:43,464 [mcp.server.lowlevel.server] INFO: Processing request of type CallToolRequest
+2026-03-16 23:06:43,466 [claude-typer.queue] INFO: Queue loaded: 4 answers
+2026-03-16 23:06:43,467 [claude-typer.server] INFO: Queue loaded: 4 answers
+2026-03-16 23:07:13,115 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 23:07:13,534 [claude-typer.queue] INFO: Typing answer 1/4 (333 chars)
+2026-03-16 23:08:33,377 [claude-typer.typing] INFO: Typed 333 chars in 79.84s
+2026-03-16 23:08:33,380 [claude-typer.server] INFO: Typed answer 1 (333 chars) — 3 remaining
+2026-03-16 23:08:48,026 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 23:08:48,486 [claude-typer.queue] INFO: Typing answer 2/4 (294 chars)
+2026-03-16 23:09:57,271 [claude-typer.typing] INFO: Typed 294 chars in 68.78s
+2026-03-16 23:09:57,274 [claude-typer.server] INFO: Typed answer 2 (294 chars) — 2 remaining
+2026-03-16 23:10:17,626 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 23:10:18,035 [claude-typer.queue] INFO: Typing answer 3/4 (269 chars)
+2026-03-16 23:11:24,140 [claude-typer.typing] INFO: Typed 269 chars in 66.10s
+2026-03-16 23:11:24,142 [claude-typer.server] INFO: Typed answer 3 (269 chars) — 1 remaining
+2026-03-16 23:11:56,360 [claude-typer.hotkeys] INFO: Hotkey triggered: next_answer (Ctrl+Alt+N)
+2026-03-16 23:11:56,778 [claude-typer.queue] INFO: Typing answer 4/4 (331 chars)
+2026-03-16 23:13:14,690 [claude-typer.typing] INFO: Typed 331 chars in 77.91s
+2026-03-16 23:13:14,692 [claude-typer.server] INFO: Queue complete! 4 typed, 0 skipped
+2026-03-16 23:13:14,707 [claude-typer.server] INFO: Typed answer 4 (331 chars) — 0 remaining
