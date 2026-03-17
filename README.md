@@ -5,14 +5,18 @@ A Windows MCP extension for Claude Desktop that lets Claude type text directly i
 ## Features
 
 - **Human-like typing** — Simulates realistic keystroke timing with digraph acceleration, thinking pauses, speed drift, and natural variance
+- **Approval mode** — Preview text before Claude types it (on by default). Approve, reject, or request changes
 - **Configurable speed** — WPM slider (30–150) and consistency control
 - **Clipboard paste** — Instant paste mode for large blocks of text
 - **Keyboard shortcuts** — Send formatting commands (Ctrl+B, Ctrl+I, etc.) to any app
+- **Emergency stop** — Cancel typing mid-stream if something goes wrong
 - **Writing style presets** — Intellectual, smart, concise, casual, professional, and more
 - **Grade-level targeting** — Adjust output complexity from 1st grade to postgraduate
 - **Style cloning** — Calibration questionnaire that learns your writing style
-- **Settings GUI** — Live control panel with sliders, toggles, and profile management
-- **Window targeting** — Find and focus specific application windows
+- **Settings GUI** — Live control panel with sliders, toggles, action log, and profile management
+- **Window targeting** — Find and focus specific application windows with verification
+- **Health diagnostics** — Built-in health check to troubleshoot issues
+- **Action log** — Rolling history of all operations for review
 
 ## Quick Start
 
@@ -59,6 +63,9 @@ Once connected, you can ask Claude things like:
 - *"Start a style calibration session"*
 - *"Paste this code block into VS Code"*
 - *"Press Ctrl+B to toggle bold, then type 'Important'"*
+- *"Turn off approval mode so you can type directly"*
+- *"Run a health check"*
+- *"Stop typing"*
 
 ## MCP Tools Reference
 
@@ -66,8 +73,11 @@ Once connected, you can ask Claude things like:
 
 | Tool | Description |
 |------|-------------|
-| `type_text(text)` | Type text character-by-character with current speed settings |
-| `paste_text(text)` | Instant clipboard paste (Ctrl+V) |
+| `type_text(text)` | Type text character-by-character (stages for approval if approval mode is on) |
+| `paste_text(text)` | Instant clipboard paste (stages for approval if approval mode is on) |
+| `approve_pending()` | Approve staged text and execute the type/paste |
+| `reject_pending()` | Cancel staged text without typing |
+| `stop_typing()` | Emergency stop — cancel typing in progress |
 | `press_keys(keys)` | Send keyboard shortcuts like `ctrl+b`, `enter`, `ctrl+shift+7` |
 
 ### Configuration
@@ -76,7 +86,8 @@ Once connected, you can ask Claude things like:
 |------|-------------|
 | `configure_typing(wpm, consistency, human_mode)` | Adjust typing behavior |
 | `configure_style(preset, grade_level, profile)` | Set writing style |
-| `get_settings()` | View current configuration |
+| `configure_approval(require_approval)` | Toggle approval mode on/off |
+| `get_settings()` | View current configuration, pending text, and active window |
 
 ### Window Management
 
@@ -84,6 +95,7 @@ Once connected, you can ask Claude things like:
 |------|-------------|
 | `get_active_window_info()` | See which window is focused |
 | `focus_window_by_title(title)` | Focus a window by partial title match |
+| `check_window(expected_title)` | Verify the right window is focused before typing |
 | `list_open_windows()` | List all visible windows |
 
 ### Style Profiles
@@ -95,6 +107,24 @@ Once connected, you can ask Claude things like:
 | `list_style_profiles()` | List saved profiles |
 | `delete_style_profile(name)` | Delete a profile |
 
+### Diagnostics
+
+| Tool | Description |
+|------|-------------|
+| `health_check()` | Check all dependencies, clipboard, display, and window management |
+| `get_action_log(count)` | View recent action history |
+
+## Approval Mode
+
+By default, Claude Typer requires your approval before typing anything. When you ask Claude to type text:
+
+1. Claude generates the text and calls `type_text()`
+2. The text is **staged** (not typed yet) and shown to you as a preview
+3. You review it and say "looks good" → Claude calls `approve_pending()` → typing begins
+4. Or say "change X" → Claude calls `reject_pending()` and regenerates
+
+You can turn this off with `configure_approval(false)` or via the GUI checkbox.
+
 ## Settings GUI
 
 The settings window launches automatically alongside the MCP server. It provides:
@@ -102,10 +132,14 @@ The settings window launches automatically alongside the MCP server. It provides
 - **WPM slider** (30–150)
 - **Consistency slider** (0.0–1.0)
 - **Human-Like Mode toggle**
+- **Require Approval toggle**
+- **Always On Top toggle**
 - **Style preset dropdown**
 - **Grade level slider** (1–16)
 - **Profile selector**
-- **Status indicators**
+- **Status indicator** with health info
+- **Active window display** (updates every 2s)
+- **Scrollable action log** with timestamps
 
 Changes in the GUI are applied immediately and persisted to `config.json`.
 
@@ -120,6 +154,13 @@ When enabled, the typing engine simulates realistic human behavior:
 - **Speed drift** — WPM gradually fluctuates ±15% over time
 - **Log-normal distribution** — Occasional longer pauses, rarely faster-than-normal bursts
 
+## Safety Features
+
+- **Failsafe**: Move your mouse to any screen corner to abort typing immediately (pyautogui built-in)
+- **Emergency stop**: Call `stop_typing()` to cancel mid-type
+- **Typing lock**: Prevents concurrent typing operations from conflicting
+- **Clipboard preservation**: Original clipboard contents are restored after paste operations
+
 ## File Structure
 
 ```
@@ -131,6 +172,7 @@ claude-typer/
 ├── gui.py                 # Settings GUI (tkinter)
 ├── window_manager.py      # Window detection and focusing
 ├── config.json            # Persisted settings
+├── claude_typer.log       # Log file (created on first run)
 ├── profiles/              # Custom style profiles
 ├── requirements.txt       # Python dependencies
 └── README.md              # This file
@@ -138,18 +180,25 @@ claude-typer/
 
 ## Troubleshooting
 
+Run `health_check()` first — it will identify most issues automatically.
+
 **Claude Desktop doesn't see the tools:**
 - Verify the path in `claude_desktop_config.json` is correct and uses double backslashes
 - Make sure Python is on your PATH, or use the full path to `python.exe`
 - Restart Claude Desktop completely (check system tray)
 
 **Typing goes to the wrong window:**
-- Use `get_active_window_info()` to check which window is focused
+- Use `check_window("Google Docs")` to verify the right window is focused
 - Use `focus_window_by_title()` to target the correct app before typing
+
+**Typing stops mid-way or behaves oddly:**
+- Check `get_action_log()` for error details
+- Ensure no other program is grabbing keyboard focus
+- The failsafe may have triggered — check if your mouse is near a screen corner
 
 **GUI doesn't appear:**
 - The GUI runs in a background thread; it may take a moment to appear
-- Check the console for error messages
+- Check `claude_typer.log` for error messages
 - Ensure tkinter is installed (comes with standard Python)
 
 **Microsoft Store version of Claude Desktop:**
