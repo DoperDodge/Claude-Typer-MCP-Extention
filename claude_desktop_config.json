@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "claude-typer": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\steve\\Downloads\\claude-typer\\claude-typer\\server.py"
+      ]
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "chat",
+    "coworkWebSearchEnabled": true
+  }
+}
