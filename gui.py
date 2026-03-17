@@ -7,11 +7,19 @@ typing behavior, writing style, and profile management.
 
 import json
 import os
+import time
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, scrolledtext
+from collections import deque
 from typing import Callable, Optional
 
 CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "config.json")
+
+DEFAULT_CONFIG = {
+    "typing": {"wpm": 80, "consistency": 0.7, "human_mode": True},
+    "style": {"preset": None, "grade_level": None, "active_profile": None},
+    "approval": {"require_approval": True},
+}
 
 
 class SettingsGUI:
@@ -29,12 +37,16 @@ class SettingsGUI:
 
         self.root = tk.Tk()
         self.root.title("Claude Typer — Settings")
-        self.root.geometry("420x620")
-        self.root.resizable(False, False)
+        self.root.geometry("440x850")
+        self.root.resizable(True, True)
+        self.root.minsize(420, 600)
         self.root.configure(bg="#1a1a2e")
 
         # Load persisted settings
         self._settings = self._load_config()
+
+        # Action log
+        self._action_log: deque = deque(maxlen=50)
 
         self._build_ui()
         self._apply_from_config()
@@ -64,8 +76,36 @@ class SettingsGUI:
         style.configure("TCheckbutton", background=bg, foreground=fg,
                         font=("Segoe UI", 10))
         style.configure("TCombobox", font=("Segoe UI", 10))
+        style.configure("Small.TLabel", background=bg, foreground="#888888",
+                        font=("Segoe UI", 9))
 
-        main = ttk.Frame(self.root, padding=20)
+        # Scrollable container
+        canvas = tk.Canvas(self.root, bg=bg, highlightthickness=0)
+        scrollbar = ttk.Scrollbar(self.root, orient="vertical", command=canvas.yview)
+        scroll_frame = ttk.Frame(canvas)
+
+        scroll_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+
+        canvas_window = canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+
+        # Keep the inner frame width matched to the canvas width on resize
+        def _on_canvas_configure(event):
+            canvas.itemconfig(canvas_window, width=event.width)
+        canvas.bind("<Configure>", _on_canvas_configure)
+
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+
+        # Enable mouse wheel scrolling
+        def _on_mousewheel(event):
+            canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        canvas.bind_all("<MouseWheel>", _on_mousewheel)
+
+        main = ttk.Frame(scroll_frame, padding=20)
         main.pack(fill="both", expand=True)
 
         # Title
@@ -106,7 +146,23 @@ class SettingsGUI:
             main, text="Human-Like Mode", variable=self.human_var,
             command=self._on_setting_change
         )
-        self.human_check.pack(anchor="w", pady=(0, 15))
+        self.human_check.pack(anchor="w", pady=(0, 4))
+
+        # Approval mode
+        self.approval_var = tk.BooleanVar(value=True)
+        self.approval_check = ttk.Checkbutton(
+            main, text="Require Approval Before Typing", variable=self.approval_var,
+            command=self._on_setting_change
+        )
+        self.approval_check.pack(anchor="w", pady=(0, 4))
+
+        # Always on top
+        self.ontop_var = tk.BooleanVar(value=False)
+        self.ontop_check = ttk.Checkbutton(
+            main, text="Always On Top", variable=self.ontop_var,
+            command=self._on_topmost_change
+        )
+        self.ontop_check.pack(anchor="w", pady=(0, 15))
 
         # ---- Writing Style ---- #
         ttk.Label(main, text="WRITING STYLE", style="Header.TLabel").pack(anchor="w")
@@ -132,7 +188,7 @@ class SettingsGUI:
         self.grade_label = ttk.Label(grade_frame, text="Off", style="Value.TLabel")
         self.grade_label.pack(side="right")
 
-        self.grade_var = tk.IntVar(value=0)  # 0 = off
+        self.grade_var = tk.IntVar(value=0)
         self.grade_slider = ttk.Scale(main, from_=0, to=16, variable=self.grade_var,
                                        orient="horizontal", command=self._on_grade_change)
         self.grade_slider.pack(fill="x", pady=(0, 8))
@@ -152,11 +208,65 @@ class SettingsGUI:
         ttk.Label(main, text="STATUS", style="Header.TLabel").pack(anchor="w", pady=(15, 0))
         ttk.Separator(main, orient="horizontal").pack(fill="x", pady=(2, 8))
 
-        self.status_label = ttk.Label(main, text="MCP server running", foreground="#4ecca3")
+        self.status_label = ttk.Label(main, text="Starting...", foreground="#ffaa00")
         self.status_label.pack(anchor="w")
 
+        self.window_label = ttk.Label(main, text="Active window: —", style="Small.TLabel")
+        self.window_label.pack(anchor="w", pady=(4, 0))
+
         self.action_label = ttk.Label(main, text="Ready", foreground="#888888")
-        self.action_label.pack(anchor="w")
+        self.action_label.pack(anchor="w", pady=(4, 0))
+
+        # ---- Answer Queue ---- #
+        ttk.Label(main, text="ANSWER QUEUE", style="Header.TLabel").pack(anchor="w", pady=(15, 0))
+        ttk.Separator(main, orient="horizontal").pack(fill="x", pady=(2, 8))
+
+        self.queue_status_label = ttk.Label(
+            main, text="No queue loaded", foreground="#888888"
+        )
+        self.queue_status_label.pack(anchor="w")
+
+        self.queue_progress_label = ttk.Label(
+            main, text="", style="Small.TLabel"
+        )
+        self.queue_progress_label.pack(anchor="w", pady=(2, 0))
+
+        self.queue_next_label = ttk.Label(
+            main, text="", style="Small.TLabel"
+        )
+        self.queue_next_label.pack(anchor="w", pady=(2, 0))
+
+        # Hotkey reference
+        hotkey_frame = ttk.Frame(main)
+        hotkey_frame.pack(fill="x", pady=(8, 0))
+
+        ttk.Label(hotkey_frame, text="Hotkeys:", foreground="#6c63ff",
+                  font=("Segoe UI", 9, "bold"),
+                  background="#1a1a2e").pack(anchor="w")
+
+        hotkey_ref = (
+            "  Ctrl+Alt+N — Type next answer\n"
+            "  Ctrl+Alt+S — Skip answer\n"
+            "  Ctrl+Alt+X — Stop / Clear queue\n"
+            "  Ctrl+Alt+Z — Undo last answer"
+        )
+        ttk.Label(hotkey_frame, text=hotkey_ref, style="Small.TLabel",
+                  justify="left").pack(anchor="w")
+
+        # ---- Action Log ---- #
+        ttk.Label(main, text="ACTION LOG", style="Header.TLabel").pack(anchor="w", pady=(15, 0))
+        ttk.Separator(main, orient="horizontal").pack(fill="x", pady=(2, 8))
+
+        self.log_text = scrolledtext.ScrolledText(
+            main, height=6, wrap=tk.WORD,
+            bg="#0d1117", fg="#8b949e", insertbackground="#ffffff",
+            font=("Consolas", 9), state="disabled",
+            borderwidth=1, relief="solid",
+        )
+        self.log_text.pack(fill="x", pady=(0, 10))
+
+        # ---- Window tracking ---- #
+        self._update_window_label()
 
     # ------------------------------------------------------------------ #
     #  Event handlers                                                     #
@@ -188,6 +298,24 @@ class SettingsGUI:
         if self._on_change:
             self._on_change(settings)
 
+    def _on_topmost_change(self):
+        """Toggle always-on-top."""
+        self.root.attributes("-topmost", self.ontop_var.get())
+
+    def _update_window_label(self):
+        """Periodically poll the active window and update the label."""
+        try:
+            from window_manager import get_active_window
+            win = get_active_window()
+            title = win.get("title", "unknown")
+            if title and title != self.root.title():
+                display = title if len(title) <= 50 else title[:47] + "..."
+                self.window_label.configure(text=f"Active window: {display}")
+        except Exception:
+            pass
+        # Poll every 2 seconds
+        self.root.after(2000, self._update_window_label)
+
     # ------------------------------------------------------------------ #
     #  Public API                                                         #
     # ------------------------------------------------------------------ #
@@ -207,7 +335,10 @@ class SettingsGUI:
                 "preset": preset if preset != "(none)" else None,
                 "grade_level": grade if grade > 0 else None,
                 "active_profile": profile if profile != "(none)" else None,
-            }
+            },
+            "approval": {
+                "require_approval": self.approval_var.get(),
+            },
         }
 
     def set_status(self, text: str, color: str = "#4ecca3"):
@@ -215,8 +346,18 @@ class SettingsGUI:
         self.root.after(0, lambda: self.status_label.configure(text=text, foreground=color))
 
     def set_action(self, text: str):
-        """Update the last-action label from another thread."""
-        self.root.after(0, lambda: self.action_label.configure(text=text))
+        """Update the last-action label and append to log from another thread."""
+        def _update():
+            timestamp = time.strftime("%H:%M:%S")
+            self.action_label.configure(text=text)
+
+            # Append to log
+            self.log_text.configure(state="normal")
+            self.log_text.insert(tk.END, f"[{timestamp}] {text}\n")
+            self.log_text.see(tk.END)
+            self.log_text.configure(state="disabled")
+
+        self.root.after(0, _update)
 
     def refresh_profiles(self):
         """Reload profile list from disk."""
@@ -225,6 +366,50 @@ class SettingsGUI:
         self.profile_combo.configure(values=profiles)
         if current not in profiles:
             self.profile_var.set("(none)")
+
+    def update_queue_display(self, status: dict):
+        """Update the answer queue display from another thread."""
+        def _update():
+            if not status.get("loaded"):
+                self.queue_status_label.configure(
+                    text="No queue loaded", foreground="#888888"
+                )
+                self.queue_progress_label.configure(text="")
+                self.queue_next_label.configure(text="")
+                return
+
+            total = status.get("total", 0)
+            completed = status.get("completed", 0)
+            skipped = status.get("skipped", 0)
+            remaining = status.get("remaining", 0)
+
+            if status.get("queue_complete"):
+                self.queue_status_label.configure(
+                    text=f"Complete! {completed} typed, {skipped} skipped",
+                    foreground="#4ecca3"
+                )
+                self.queue_progress_label.configure(text="")
+                self.queue_next_label.configure(text="")
+            else:
+                current = status.get("current", 1)
+                self.queue_status_label.configure(
+                    text=f"Answer {current} of {total} — {remaining} remaining",
+                    foreground="#ffaa00"
+                )
+
+                mode = status.get("mode", "type")
+                self.queue_progress_label.configure(
+                    text=f"Mode: {mode} | Typed: {completed} | Skipped: {skipped}"
+                )
+
+                next_q = status.get("current_question", "")
+                if next_q:
+                    display_q = next_q if len(next_q) <= 55 else next_q[:52] + "..."
+                    self.queue_next_label.configure(text=f"Next: {display_q}")
+                else:
+                    self.queue_next_label.configure(text="")
+
+        self.root.after(0, _update)
 
     def run(self):
         """Start the GUI event loop (blocks)."""
@@ -235,23 +420,31 @@ class SettingsGUI:
         try:
             self.root.update()
         except tk.TclError:
-            pass  # Window was closed
+            pass
 
     # ------------------------------------------------------------------ #
     #  Config persistence                                                 #
     # ------------------------------------------------------------------ #
 
     def _load_config(self) -> dict:
+        cfg = {}
         if os.path.isfile(CONFIG_PATH):
             try:
                 with open(CONFIG_PATH, 'r') as f:
-                    return json.load(f)
+                    cfg = json.load(f)
             except (json.JSONDecodeError, IOError):
                 pass
-        return {
-            "typing": {"wpm": 80, "consistency": 0.7, "human_mode": True},
-            "style": {"preset": None, "grade_level": None, "active_profile": None},
-        }
+
+        # Migrate missing keys
+        for section, defaults in DEFAULT_CONFIG.items():
+            if section not in cfg:
+                cfg[section] = dict(defaults)
+            elif isinstance(defaults, dict):
+                for key, val in defaults.items():
+                    if key not in cfg[section]:
+                        cfg[section][key] = val
+
+        return cfg
 
     def _save_config(self, settings: dict):
         try:
@@ -264,6 +457,7 @@ class SettingsGUI:
         """Set GUI widgets from loaded config."""
         t = self._settings.get("typing", {})
         s = self._settings.get("style", {})
+        a = self._settings.get("approval", {})
 
         self.wpm_var.set(t.get("wpm", 80))
         self.wpm_label.configure(text=str(t.get("wpm", 80)))
@@ -272,6 +466,8 @@ class SettingsGUI:
         self.cons_label.configure(text=f"{t.get('consistency', 0.7):.2f}")
 
         self.human_var.set(t.get("human_mode", True))
+
+        self.approval_var.set(a.get("require_approval", True))
 
         preset = s.get("preset")
         self.preset_var.set(preset if preset else "(none)")
