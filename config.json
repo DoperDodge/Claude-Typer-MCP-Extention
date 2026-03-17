@@ -1,12 +1,15 @@
 {
   "typing": {
-    "wpm": 80,
-    "consistency": 0.7,
+    "wpm": 53,
+    "consistency": 0.53,
     "human_mode": true
   },
   "style": {
     "preset": null,
     "grade_level": null,
     "active_profile": null
+  },
+  "approval": {
+    "require_approval": true
   }
 }
